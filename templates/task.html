@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=0.6">
+		<title>Admin: Task</title>
+		<style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Arial';
+            }
+            .mainHeading{
+                text-align: center;
+                background-color: #6940bc;
+                color: #fff;
+                font-family: 'Times New Roman';
+                padding: 10px;
+            }
+            .btnfinal{
+            	padding: 5px;
+                width: 200px;
+                height:40px;
+                background-color: #55add6;
+                color: #fff;
+                border:0;
+                text-align: center;
+                border-radius: 7px;
+                font-size: 18px;
+                float: left;
+            }    
+            .wrap h2{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .wrap{
+                width: 410px;
+                overflow: hidden;
+                margin: auto;
+                margin-top: 120px;
+                padding: 20px;
+                background: #fff;
+                border:1px solid silver;
+                border-radius: 5px;
+            }
+            .wrap .btn-login{
+                padding: 5px;
+                width: 412px;
+                height:40px;
+                background-color: #55add6;
+                color: #fff;
+                border:0;
+                border-radius: 7px;
+                font-size: 18px;
+            }
+        </style>
+	</head>
+
+
+	<body>
+		<div class="mainHeading">
+            <h1>Attendance Monitoring System</h1>
+        </div>
+    <div class="wrap">
+		<h2>Welcome Admin</h2>
+		<form action="/signup_teacher" method="post">
+			<input type="submit" class="btn-login" value="mark attendance">
+		</form>
+        <!-- <div class="container-md pt-3 p-3 my-2 text-center text-white">
+            <h1>{{ prediction_text }}</h1>
+        </div> -->
+        <br>
+		<form action="/student" method="post">
+			<input type="submit" class ="btn-login" value="upload student data">
+		</form>
+		<br>
+        <form action="/view" method="post">
+            <!-- <input type="button" class = "btn-login" value="Download Attendance" onclick="window.location.href='../Attendance.csv'" download="Attendance.csv"/> -->
+            
+            <!-- <a href="../Attendance.csv" download="Attendance.csv">Download SO Logo</a> -->
+            <a type="submit" class="btnfinal" href="../Attendance.csv" download="Attendance.csv">Download Attendance </a>
+
+            <!-- <button onclick="window.location.href='D:\BE Project\MaskedFaceRecognitionAttendance\Attendance.csv'">Download Attendance</button> -->
+            
+			<!-- <input type="submit" class ="btn-login" value="view"> -->
+		</form>
+		<form action="/logout" method="post">
+			<input style="width: 190px;float: right;" type="submit" class = "btnfinal" name="logout" value="Logout">
+		</form>
+	</div>
+	</body>
+</html>
